@@ -1,0 +1,52 @@
+{
+  "name": "collabhub-backend",
+  "version": "1.0.0",
+  "description": "CollabHub AWS Serverless Backend",
+  "main": "bin/collabhub.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "synth": "cdk synth",
+    "deploy": "cdk deploy --all",
+    "deploy:auth": "cdk deploy CollabHubAuthStack",
+    "deploy:database": "cdk deploy CollabHubDatabaseStack",
+    "deploy:api": "cdk deploy CollabHubApiStack",
+    "deploy:storage": "cdk deploy CollabHubStorageStack",
+    "deploy:events": "cdk deploy CollabHubEventsStack",
+    "deploy:monitoring": "cdk deploy CollabHubMonitoringStack",
+    "destroy": "cdk destroy --all",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.131",
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.10.6",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "aws-cdk": "^2.118.0",
+    "esbuild": "^0.19.11",
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cognito-identity-provider": "^3.485.0",
+    "@aws-sdk/client-dynamodb": "^3.485.0",
+    "@aws-sdk/client-eventbridge": "^3.485.0",
+    "@aws-sdk/client-s3": "^3.485.0",
+    "@aws-sdk/client-sqs": "^3.485.0",
+    "@aws-sdk/client-ssm": "^3.485.0",
+    "@aws-sdk/lib-dynamodb": "^3.485.0",
+    "@aws-sdk/s3-request-presigner": "^3.485.0",
+    "aws-cdk-lib": "^2.118.0",
+    "constructs": "^10.3.0",
+    "stripe": "^14.12.0",
+    "ulid": "^2.3.0",
+    "zod": "^3.22.4"
+  }
+}
